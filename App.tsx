@@ -72,10 +72,10 @@ const App: React.FC = () => {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
                 N
             </div>
-            <h1 className="text-xl font-bold tracking-tight text-emerald-950">NutriFlow</h1>
+            <h1 className="text-xl font-bold tracking-tight text-blue-950">NutriFlow</h1>
           </div>
           {userProfile && (
             <div className="text-sm font-medium text-slate-500">
@@ -108,7 +108,7 @@ const App: React.FC = () => {
         {activeTab === 'dashboard' && !userProfile && (
              <div className="text-center mt-20">
                  <p className="text-slate-500">Por favor, configure seu perfil para ver o painel.</p>
-                 <button onClick={() => setActiveTab('profile')} className="mt-4 text-emerald-600 font-bold hover:underline">Ir para Perfil</button>
+                 <button onClick={() => setActiveTab('profile')} className="mt-4 text-blue-600 font-bold hover:underline">Ir para Perfil</button>
              </div>
         )}
       </main>
@@ -118,7 +118,7 @@ const App: React.FC = () => {
         <div className="flex justify-around items-center h-16">
           <button 
             onClick={() => setActiveTab('dashboard')}
-            className={`flex flex-col items-center gap-1 ${activeTab === 'dashboard' ? 'text-emerald-600' : 'text-slate-400'}`}
+            className={`flex flex-col items-center gap-1 ${activeTab === 'dashboard' ? 'text-blue-600' : 'text-slate-400'}`}
           >
             <LayoutDashboard size={24} />
             <span className="text-[10px] font-medium">Painel</span>
@@ -126,7 +126,7 @@ const App: React.FC = () => {
           
           <button 
             onClick={() => setActiveTab('add')}
-            className={`flex flex-col items-center gap-1 ${activeTab === 'add' ? 'text-emerald-600' : 'text-slate-400'}`}
+            className={`flex flex-col items-center gap-1 ${activeTab === 'add' ? 'text-blue-600' : 'text-slate-400'}`}
           >
             <PlusCircle size={24} />
             <span className="text-[10px] font-medium">Adicionar</span>
@@ -134,7 +134,7 @@ const App: React.FC = () => {
           
           <button 
             onClick={() => setActiveTab('profile')}
-            className={`flex flex-col items-center gap-1 ${activeTab === 'profile' ? 'text-emerald-600' : 'text-slate-400'}`}
+            className={`flex flex-col items-center gap-1 ${activeTab === 'profile' ? 'text-blue-600' : 'text-slate-400'}`}
           >
             <UserCircle size={24} />
             <span className="text-[10px] font-medium">Perfil</span>
@@ -146,9 +146,9 @@ const App: React.FC = () => {
        <div className="hidden md:block fixed top-20 left-[max(0px,calc(50%-24rem-10rem))] w-32 space-y-4">
            {/* Desktop specific navigation could go here, for now relying on mobile-first bottom nav approach for simplicity but hiding it on desktop and adding a simple switcher if needed. Since the request is for a simple app, I'll rely on the state switcher. */}
             <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-2 space-y-1">
-                <button onClick={() => setActiveTab('dashboard')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'dashboard' ? 'bg-emerald-50 text-emerald-700' : 'text-slate-600 hover:bg-slate-50'}`}>Painel</button>
-                <button onClick={() => setActiveTab('add')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'add' ? 'bg-emerald-50 text-emerald-700' : 'text-slate-600 hover:bg-slate-50'}`}>Adicionar</button>
-                <button onClick={() => setActiveTab('profile')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'profile' ? 'bg-emerald-50 text-emerald-700' : 'text-slate-600 hover:bg-slate-50'}`}>Perfil</button>
+                <button onClick={() => setActiveTab('dashboard')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'dashboard' ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50'}`}>Painel</button>
+                <button onClick={() => setActiveTab('add')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'add' ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50'}`}>Adicionar</button>
+                <button onClick={() => setActiveTab('profile')} className={`w-full text-left px-4 py-2 rounded-lg text-sm font-medium transition ${activeTab === 'profile' ? 'bg-blue-50 text-blue-700' : 'text-slate-600 hover:bg-slate-50'}`}>Perfil</button>
             </div>
        </div>
 

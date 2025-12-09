@@ -59,7 +59,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
 
   return (
     <div className="max-w-md mx-auto bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-      <div className="flex items-center gap-3 mb-6 text-emerald-600">
+      <div className="flex items-center gap-3 mb-6 text-blue-600">
         <User size={24} />
         <h2 className="text-xl font-bold">Seu Perfil</h2>
       </div>
@@ -72,7 +72,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
             required
             value={profile.name}
             onChange={e => setProfile({...profile, name: e.target.value})}
-            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none transition"
+            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
           />
         </div>
 
@@ -84,7 +84,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
               required
               value={profile.age}
               onChange={e => setProfile({...profile, age: Number(e.target.value)})}
-              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none"
+              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
           <div>
@@ -92,7 +92,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
             <select
               value={profile.gender}
               onChange={e => setProfile({...profile, gender: e.target.value as Gender})}
-              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
+              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-white"
             >
               <option value={Gender.MALE}>Masculino</option>
               <option value={Gender.FEMALE}>Feminino</option>
@@ -109,7 +109,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
               step="0.1"
               value={profile.weight}
               onChange={e => setProfile({...profile, weight: Number(e.target.value)})}
-              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none"
+              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
           <div>
@@ -119,7 +119,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
               required
               value={profile.height}
               onChange={e => setProfile({...profile, height: Number(e.target.value)})}
-              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none"
+              className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
         </div>
@@ -129,7 +129,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
           <select
             value={profile.activityLevel}
             onChange={e => setProfile({...profile, activityLevel: e.target.value as ActivityLevel})}
-            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
+            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-white"
           >
             <option value={ActivityLevel.SEDENTARY}>Sedentário (Pouco exercício)</option>
             <option value={ActivityLevel.LIGHTLY_ACTIVE}>Levemente Ativo (1-3 dias)</option>
@@ -144,7 +144,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
           <select
             value={profile.goal}
             onChange={e => setProfile({...profile, goal: e.target.value as any})}
-            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
+            className="w-full p-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-white"
           >
             <option value="LOSE">Perder Peso (-500kcal)</option>
             <option value="MAINTAIN">Manter Peso</option>
@@ -154,7 +154,7 @@ const Profile: React.FC<ProfileProps> = ({ currentProfile, onSave }) => {
 
         <button
           type="submit"
-          className="w-full mt-4 bg-emerald-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-emerald-700 transition flex items-center justify-center gap-2"
+          className="w-full mt-4 bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-blue-700 transition flex items-center justify-center gap-2"
         >
           <Save size={20} />
           Salvar Perfil

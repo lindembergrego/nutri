@@ -25,12 +25,12 @@ const Dashboard: React.FC<DashboardProps> = ({ userProfile, todaysMeals, healthT
   ];
   
   const macroData = [
-    { name: 'Prot', value: totalProtein, fill: '#10b981' }, // emerald-500
-    { name: 'Carb', value: totalCarbs, fill: '#3b82f6' },   // blue-500
+    { name: 'Prot', value: totalProtein, fill: '#3b82f6' }, // blue-500 (Primary)
+    { name: 'Carb', value: totalCarbs, fill: '#10b981' },   // emerald-500 (Secondary)
     { name: 'Gord', value: totalFat, fill: '#f59e0b' },    // amber-500
   ];
 
-  const COLORS = ['#10b981', '#e2e8f0']; // emerald-500, slate-200
+  const COLORS = ['#3b82f6', '#e2e8f0']; // blue-500, slate-200
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
@@ -41,9 +41,9 @@ const Dashboard: React.FC<DashboardProps> = ({ userProfile, todaysMeals, healthT
             <h2 className="text-2xl font-bold text-slate-800">Olá, {userProfile.name}</h2>
             <p className="text-slate-500 text-sm mt-1">{healthTip}</p>
         </div>
-        <div className="flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full">
-            <TrendingUp size={18} className="text-emerald-600" />
-            <span className="text-sm font-medium text-emerald-800">{userProfile.goal === 'LOSE' ? 'Perder Peso' : userProfile.goal === 'GAIN' ? 'Ganhar Massa' : 'Manter Peso'}</span>
+        <div className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+            <TrendingUp size={18} className="text-blue-600" />
+            <span className="text-sm font-medium text-blue-800">{userProfile.goal === 'LOSE' ? 'Perder Peso' : userProfile.goal === 'GAIN' ? 'Ganhar Massa' : 'Manter Peso'}</span>
         </div>
       </div>
 
@@ -93,8 +93,8 @@ const Dashboard: React.FC<DashboardProps> = ({ userProfile, todaysMeals, healthT
             </ResponsiveContainer>
           </div>
           <div className="flex justify-between mt-4 text-sm text-slate-500 px-4">
-            <div className="flex items-center gap-1"><div className="w-3 h-3 rounded-full bg-emerald-500"></div>Prot</div>
-            <div className="flex items-center gap-1"><div className="w-3 h-3 rounded-full bg-blue-500"></div>Carb</div>
+            <div className="flex items-center gap-1"><div className="w-3 h-3 rounded-full bg-blue-500"></div>Prot</div>
+            <div className="flex items-center gap-1"><div className="w-3 h-3 rounded-full bg-emerald-500"></div>Carb</div>
             <div className="flex items-center gap-1"><div className="w-3 h-3 rounded-full bg-amber-500"></div>Gord</div>
           </div>
         </div>

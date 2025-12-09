@@ -65,12 +65,12 @@ const MealEntry: React.FC<MealEntryProps> = ({ onAddMeal }) => {
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-slate-800 flex items-center gap-2">
-            <Utensils className="text-emerald-500" size={20}/>
+            <Utensils className="text-blue-500" size={20}/>
             Adicionar Refeição
         </h3>
         <button 
             onClick={() => setManualMode(!manualMode)}
-            className="text-sm text-emerald-600 font-medium hover:underline"
+            className="text-sm text-blue-600 font-medium hover:underline"
         >
             {manualMode ? 'Usar IA' : 'Modo Manual'}
         </button>
@@ -84,13 +84,13 @@ const MealEntry: React.FC<MealEntryProps> = ({ onAddMeal }) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Ex: 100g de frango grelhado com 1 colher de arroz e salada"
-              className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none resize-none h-24"
+              className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none resize-none h-24"
             />
           </div>
           <button
             onClick={handleAnalyze}
             disabled={isAnalyzing || !description.trim()}
-            className="w-full bg-emerald-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-50"
+            className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl hover:bg-blue-700 transition flex items-center justify-center gap-2 disabled:opacity-50"
           >
             {isAnalyzing ? <Loader2 className="animate-spin" size={20} /> : <Wand2 size={20} />}
             {isAnalyzing ? 'Analisando...' : 'Analisar com IA'}
